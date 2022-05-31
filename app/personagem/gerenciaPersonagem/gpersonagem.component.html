@@ -1,0 +1,106 @@
+<div class="p-grid p-justify-center card">
+  <div class="p-col-10 p-sm-6 p-md-4">
+    <p-card>
+      <div class="container">
+        <div class="p-col-12">
+          <h1>Personagem</h1>
+        </div>
+        <div class="p-col-12">
+          <a href="http://localhost:4200/cadastroPersonagem">Cadastrar Novo Personagem</a>
+        </div>
+        <div class="p-grid">
+          <div class="p-col-12">
+            <p-table [value]="personagens" responsiveLayout="scroll">
+              <ng-template pTemplate="header">
+                <tr>
+                   <th>Nome </th>
+                   <th>Titulo </th>
+                   <th >Data De Nascimento </th>
+                   <th >Genero </th>
+                   <th >Altura </th>
+                   <th >Cor Dos Olhos </th>
+                   <th >Porte </th>
+                   <th >Qualidades </th>
+                   <th >Defeitos </th>
+                   <th >Traumas </th>
+                   <th>Valores </th>
+                   <th >Inventário Alimentos</th>
+                   <th >Inventário Armas</th>
+                   <th style="width: 4rem"></th>
+               </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-personagem let-expanded="expanded">
+              <tr>
+                 <td>{{personagem.nome}}</td>
+                 <td>{{personagem.titulo}}</td>
+                 <td>{{personagem.dataNascimento}}</td>
+                 <td>{{personagem.genero}}</td>
+                 <td>{{personagem.altura}}</td>
+                 <td>{{personagem.corDosOlhos}}</td>
+                 <td>{{personagem.porte}}</td>
+                 <td>{{personagem.qualidades}}</td>
+                 <td>{{personagem.defeitos}}</td>
+                 <td>{{personagem.traumas}}</td>
+                 <td>{{personagem.valores}}</td>
+                 <td>{{personagem.inventario.alimentos}}</td>
+                 <td>{{personagem.inventario.armas}}</td>
+                 <td class="col-acoes">
+                  <div class="p-col-12 button">
+                    <a [routerLink]="['/cadastroPersonagem', personagem.codigo]"><button class="br-button btn-block" pButton
+                        licon="pi pi-trash" pTooltip="Editar"></button></a>
+                  </div>
+                   <button class="p-button" pButton icon="pi pi-trash" pTooltip="Excluir" tooltipPosition="top"
+                   (click)="excluir(personagem)"></button>
+                 </td>
+             </tr>
+          </ng-template>
+          <!--<ng-template pTemplate="rowexpansion" let-personagem>
+            <tr>
+                <td colspan="10">
+                    <div class="p-6">
+                        <p-table [value]="personagens" dataKey="id">
+                            <ng-template pTemplate="header">
+                                <th>
+                            </ng-template>
+                            <ng-template pTemplate="body" let-personagem>
+                                <tr>
+                                    <td>{{personagem.nome}}</td>
+                                    <td>{{personagem.titulo}}</td>
+                                    <td>{{personagem.dataNascimento}}</td>
+                                    <td>{{personagem.genero}}</td>
+                                    <td>{{personagem.altura}}</td>
+                                    <td>{{personagem.corDosOlhos}}</td>
+                                    <td>{{personagem.porte}}</td>
+                                    <td>{{personagem.cabelo}}</td>
+                                    <td>{{personagem.qualidades}}</td>
+                                    <td>{{personagem.defeitos}}</td>
+                                    <td>{{personagem.traumas}}</td>
+                                    <td>{{personagem.valores}}</td>
+                                    <td>{{personagem.inventario.bebiveis}}</td>
+                                    <td>{{personagem.inventario.conhecimento}}</td>
+                                    <td>{{personagem.inventario.medicinais}}</td>
+                                    <td>{{personagem.inventario.armas}}</td>
+                                    <td class="col-acoes">
+                                      <a pButton icon="pi pi-pencil" pTooltip="Editar" tooltipPosition="top"></a>
+                                      <button pButton icon="pi pi-trash" pTooltip="Excluir" tooltipPosition="top"></button>
+                                    </td>
+                                </tr>
+                            </ng-template>
+                            <ng-template pTemplate="emptymessage">
+                                <tr>
+                                    <td colspan="6">There are no order for this product yet.</td>
+                                </tr>
+                            </ng-template>
+                        </p-table>
+                    </div>
+                </td>
+            </tr>
+                </ng-template>-->
+            </p-table>
+          </div>
+
+        </div>
+      </div>
+    </p-card>
+  </div>
+</div>

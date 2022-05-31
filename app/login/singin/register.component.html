@@ -1,0 +1,33 @@
+<!--FORMULÁRIO DE CADASTRO-->
+<div class="container">
+  <form #f="ngForm" autocomplete="off" (ngSubmit)="salvar(f)">
+    <div id="cadastroPersonagem">
+    <div class="p-col-12">
+      <h1>Cadastro</h1>
+    </div>
+    <div class="p-grid p-fluid">
+    <div class="p-col-12">
+      <input pInputText type="text" name="usuario" id="username"
+              placeholder="Nome" ngModel required #usuario />
+    </div>
+    <div class="p-col-12">
+      <input pInputText type="email" name="email" id="email"
+              placeholder="E-mail" ngModel required #email />
+    </div>
+    <div class="p-col-12">
+        <input pInputText type="password" name="senha" id="senha"
+          placeholder="Senha" ngModel required #senha />
+    </div>
+    <div class="p-col-12">
+      <!--<button pButton type="submit" hre label="Salvar"></button>-->
+      <a href="http://localhost:4200/gerenciaPersonagem"> Salvar </a>
+    </div>
+    <div class="p-col-12">
+      <label>Já tem conta?</label>
+      <a href="http://localhost:4200/login"> Ir para Login </a>
+    </div>
+    </div>
+    </div>
+  </form>
+</div>
+

@@ -1,0 +1,167 @@
+<div class="container">
+  <form #f="ngForm" autocomplete="off" (ngSubmit)="salvar(f)">
+    <div id="cadastroPersonagem">
+    <div class="p-grid">
+      <div class="p-col-12">
+        <h1>Novo Personagem</h1>
+      </div>
+
+      <div class="p-col-12 p-md-9 p-fluid">
+        <label>Nome</label>
+        <input pInputText type="text" name="nome"
+          [(ngModel)]="personagem.nome"
+          #nome="ngModel">
+      </div>
+    <td>
+          <div class="p-col-12 p-md-3 p-fluid">
+        <label>Titulo</label>
+        <input pInputText type="text" name="titulo"
+          [(ngModel)]="personagem.titulo"
+          #titulo="ngModel">
+          </div>
+        </td>
+          <td>
+          <div class="p-col-12 p-md-3 p-fluid">
+        <label>Idade</label>
+        <input pInputText type="number" name="idade"
+          [(ngModel)]="personagem.idade"
+          #idade="ngModel">
+          </div>
+        </td>
+          <td>
+          <div class="p-col-12 p-md-3 p-fluid">
+        <label>Data de Nascimento</label>
+        <p-calendar name="dataNascimento" dateFormat="dd/mm/yy"
+          [(ngModel)]="personagem.dataNascimento"
+          #dataNascimento="ngModel" ></p-calendar>
+          </div>
+        </td>
+          <div class="p-col-12 p-md-3 p-fluid">
+        <label>Local de Nascimento</label>
+        <input pInputText type="text" name="localNascimento"
+          [(ngModel)]="personagem.localNascimento"
+          #localNascimento="ngModel" required minlength="3">
+          </div>
+        <td>
+          <div class="p-col-12 p-md-3 p-fluid">
+        <label>Genero</label>
+        <input pInputText type="text" name="genero"
+          [(ngModel)]="personagem.genero"
+          #genero="ngModel">
+          </div>
+        </td>
+      <td>
+          <div class="p-col-12 p-md-3 p-fluid">
+        <label>Altura</label>
+        <input pInputText type="text" name="altura"
+          [(ngModel)]="personagem.altura"
+          required>
+          </div>
+        </td>
+      <td>
+          <div class="p-col-12 p-md-3 p-fluid">
+        <label>Cor Dos Olhos</label>
+        <input pInputText type="text" name="corDosOlhos"
+          [(ngModel)]="personagem.corDosOlhos"
+          #corDosOlhos="ngModel">
+          </div>
+        </td>
+      <td>
+          <div class="p-col-12 p-md-3 p-fluid">
+        <label>Porte</label>
+        <input pInputText type="text" name="porte"
+          [(ngModel)]="personagem.porte"
+          #porte="ngModel">
+          </div>
+        </td>
+      <td>
+          <div class="p-col-12 p-md-3 p-fluid">
+        <label>Cor Da Pele</label>
+        <input pInputText type="text" name="corDaPele"
+          [(ngModel)]="personagem.corDaPele"
+          #corDaPele="ngModel">
+          </div>
+        </td>
+      <td>
+          <div class="p-col-12 p-md-3 p-fluid">
+        <label>Cabelo</label>
+        <input pInputText type="text" name="cabelo"
+          [(ngModel)]="personagem.cabelo"
+          #cabelo="ngModel">
+          </div>
+        </td>
+      <td>
+          <div class="p-col-12 p-md-3 p-fluid">
+        <label>Qualidades</label>
+        <input pInputText type="text" name="qualidades"
+          [(ngModel)]="personagem.qualidades"
+          #qualidades="ngModel">
+          </div>
+        </td>
+          <div class="p-col-12 p-md-3 p-fluid">
+        <label>Defeitos</label>
+        <input pInputText type="text" name="defeiros"
+          [(ngModel)]="personagem.defeitos"
+          #defeitos="ngModel">
+          </div>
+
+          <div class="p-col-12 p-md-3 p-fluid">
+        <label>Traumas</label>
+        <input pInputText type="text" name="traumas"
+          [(ngModel)]="personagem.traumas"
+          #traumas="ngModel">
+          </div>
+
+          <div class="p-col-12 p-md-3 p-fluid">
+        <label>Valores</label>
+        <input pInputText type="text" name="valores"
+          [(ngModel)]="personagem.valores"
+          #valores="ngModel">
+          </div>
+
+          <div class="p-col-12 p-md-3 p-fluid">
+        <label>BackGround</label>
+        <input pInputText type="text" name="backGround"
+          [(ngModel)]="personagem.backGround"
+          #backGround="ngModel">
+          </div>
+        <td>
+          <div class="p-col-12 p-md-3 p-fluid">
+        <label>Inventário Alimentos</label>
+        <input pInputText type="text" name="inventario_alimentos"
+          [(ngModel)]="personagem.inventario.alimentos"
+          #inventario_alimentos="ngModel">
+        </div>
+      </td>
+    <td>
+        <div class="p-col-12 p-md-3 p-fluid">
+        <label>Inventário Armas</label>
+        <input pInputText type="text" name="inventario_armas"
+          [(ngModel)]="personagem.inventario.armas"
+          #inventario_armas="ngModel">
+        </div>
+      </td>
+    <td>
+          <div class="p-col-12 p-md-3 p-fluid">
+        <label>Inventário Bebíveis</label>
+        <input pInputText type="text" name="inventario_beviveis"
+          [(ngModel)]="personagem.inventario.bebiveis"
+          #inventario_beviveis="ngModel">
+          </div>
+        </td>
+      <td>
+      <div class="p-col-12 p-md-3 p-fluid">
+        <label>Inventário Conhecimentos</label>
+        <input pInputText type="text" name="inventario_conhecimento"
+          [(ngModel)]="personagem.inventario.conhecimneto"
+          #inventario_conhecimento="ngModel">
+      </div>
+    </td>
+      <div class="p-col-12">
+        <button pButton type="submit" label="Salvar"></button>
+        <a href="http://localhost:4200/gerenciaPersonagem">Voltar a Listagem de Personagem</a>
+      </div>
+    </div>
+    </div>
+  </form>
+</div>
